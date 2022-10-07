@@ -18,11 +18,11 @@ var x = setInterval(function() {
 
   // Display the result in the element with id="demo"
   document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + " ".replace(/\s/, 'T');
+  + minutes + "m " + seconds + "s ".replace(/\s/, 'T');
 
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("demo").innerHTML = "Du er her med meg<4";
   }
 }, 1000);
