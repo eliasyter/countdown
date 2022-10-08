@@ -1,5 +1,5 @@
 function getTimeRemaining(endtime) {
-    const total = Date.parse(endtime) - Date.parse(new Date());
+    const total = endtime - Date.parse(new Date());
     const seconds = Math.floor((total / 1000) % 60);
     const minutes = Math.floor((total / 1000 / 60) % 60);
     const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
@@ -22,12 +22,12 @@ function getTimeRemaining(endtime) {
     const secondsSpan = clock.querySelector('.seconds');
   
     function updateClock() {
-      const t = getTimeRemaining(endtime.toString());
+      const t = getTimeRemaining(endtime);
   
-      daysSpan.innerHTML = t.days.toString();
-      hoursSpan.innerHTML = ('0' + t.hours).slice(-2).toString();
-      minutesSpan.innerHTML = ('0' + t.minutes).slice(-2).toString();
-      secondsSpan.innerHTML = ('0' + t.seconds).slice(-2).toString();
+      daysSpan.innerHTML = t.days;
+      hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+      minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+      secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
   
       if (t.total <= 0) {
         clearInterval(timeinterval);
