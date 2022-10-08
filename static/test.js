@@ -38,5 +38,5 @@ function getTimeRemaining(endtime) {
     const timeinterval = setInterval(updateClock, 1000);
   }
   
-  const deadline = new Date(new Date("5 31, 2023 13:0:0").getTime());
+  const deadline = new Date(new Date("5 31, 2023 13:1:1").getTime());
   initializeClock('clockdiv', deadline);
