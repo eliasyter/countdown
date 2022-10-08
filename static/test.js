@@ -22,7 +22,7 @@ function getTimeRemaining(endtime) {
     const secondsSpan = clock.querySelector('.seconds');
   
     function updateClock() {
-      const t = getTimeRemaining(endtime);
+      const t = getTimeRemaining(endtime.toString());
   
       daysSpan.innerHTML = t.days.toString();
       hoursSpan.innerHTML = ('0' + t.hours).slice(-2).toString();
