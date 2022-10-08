@@ -1,5 +1,5 @@
 function getTimeRemaining(endtime) {
-    const total = endtime.getTime() - Date.parse(new Date());
+    const total = endtime.getTime() - new Date().getTime();
     const seconds = Math.floor((total / 1000) % 60);
     const minutes = Math.floor((total / 1000 / 60) % 60);
     const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
