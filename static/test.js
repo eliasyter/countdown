@@ -25,9 +25,9 @@ function getTimeRemaining(endtime) {
       const t = getTimeRemaining(endtime);
   
       daysSpan.innerHTML = t.days;
-      hoursSpan.innerHTML = ('' + t.hours).slice(-2);
-      minutesSpan.innerHTML = ('' + t.minutes).slice(-2);
-      secondsSpan.innerHTML = ('' + t.seconds).slice(-2);
+      hoursSpan.innerHTML = (t.hours);
+      minutesSpan.innerHTML = (t.minutes);
+      secondsSpan.innerHTML = (t.seconds);
   
       if (t.total <= 0) {
         clearInterval(timeinterval);
