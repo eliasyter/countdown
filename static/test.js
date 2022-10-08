@@ -24,10 +24,10 @@ function getTimeRemaining(endtime) {
     function updateClock() {
       const t = getTimeRemaining(endtime);
   
-      daysSpan.innerHTML = t.days;
-      hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-      minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-      secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+      daysSpan.innerHTML = t.days.toString();
+      hoursSpan.innerHTML = ('0' + t.hours).slice(-2).toString();
+      minutesSpan.innerHTML = ('0' + t.minutes).slice(-2).toString();
+      secondsSpan.innerHTML = ('0' + t.seconds).slice(-2).toString();
   
       if (t.total <= 0) {
         clearInterval(timeinterval);
